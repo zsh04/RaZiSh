@@ -1,0 +1,17 @@
+<%= form_for(@razish) do |f| %>
+  <% if @razish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@razish.errors.count, "error") %> prohibited this razish from being saved:</h2>
+
+      <ul>
+      <% @razish.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
